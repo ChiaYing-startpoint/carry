@@ -1,0 +1,343 @@
+// 個人中心導覽列開始
+.admin-nav{
+    .admin-card{
+        color:rgba(255, 255, 255, 0.4);
+        
+    }
+    .admin-card:hover{
+        background:rgba(18, 18, 18,.16) !important;
+        border:1px solid $primary;
+        color:$primary;
+    }
+    .material-icons{
+        font-size: 40px;
+    }
+}
+// 個人中心導覽列結束
+// 訂單資料開始
+.adminOrder{
+    margin-top: 92px;
+    background: rgba(255,255,255,.08);
+    @include iphone{
+        margin-top: 80px;
+    }
+    .order-list{
+        li:first-child{
+            border-bottom: 6px solid $primary;
+        }
+        li a{
+            display: block;
+            width:100% ;
+            border-bottom: 1px solid rgba(255, 255, 255, .4);
+            padding: 8px 0px;
+        }
+    }
+    .order-item{
+        border: none !important;
+        .card-header{
+            background: rgba(199, 167, 128, .05);
+        }
+        .order-box{
+            @include iphone{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+        }
+        .card-body ul{
+            width: 70% !important;
+            @include pad{
+                flex-direction: column !important;
+            }
+            @include iphone{
+                width: 100% !important;
+                margin-bottom: 24px !important;
+            }
+        }
+        .card-body li{
+            width: 75%;
+            @include pad{
+                display: flex !important;
+            }
+            @include iphone{
+                width: 100% !important;
+            }
+        }
+        .card-body p{
+            padding-left: 16px !important;
+            padding: 8px;
+            @include iphone{
+                padding-left: 0 !important;
+            }
+        }
+        .card-body .title{
+            @include pad{
+                width: 120px;
+            }
+        }
+        .card-body .bg-color{
+            background: rgba(255, 255, 255, .04);
+            @include pad{
+                background: none;
+            }
+            
+        }
+        
+        .card-footer{
+            border-top: 1px solid rgba(255,255,255,.2);
+            @include iphone{
+                padding: 8px !important;
+            }
+            .icon-box{
+                @include iphone{
+                    justify-content: space-around !important;
+                }
+            }
+            a{
+                font-weight: 100;
+                color: rgba(255,255,255,.6);
+                position: relative;
+            }
+            a:hover{
+                background: rgba(199, 167, 128, .16);
+                 color: rgba(255,255,255,.87);
+            }
+            .icon-help::after{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background: rgba(255,255,255,.2);
+                top:0;
+                right: -10%;
+            }
+            .icon-car::after{
+                @include iphone{
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    background: rgba(255,255,255,.2);
+                    top:0;
+                    right: -10%;
+                }
+            }
+            
+            .btn{
+              @include iphone{
+                  font-size: $font-14;
+                  padding: 6px 8px !important;
+              }
+            }
+        }
+        .btn-more {
+            width: 216px;
+        }
+        h5{
+            @include iphone{
+                font-size: $font-14;
+            }
+        }
+        
+    }
+}
+// 訂單資料結束
+// 優惠券開始
+.adminTicket{
+    padding-bottom: 120px !important;
+    .ticket-item{
+        .col-4{
+            background:rgba(199, 167, 128, 0.2);
+           border-left: 8px dashed rgba(199, 167, 128, 0.2);
+        }
+        .card-body{
+            @include iphone{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+        }
+        .img-title{
+            font-size: $font-32;
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+        .price{
+            font-size: $font-64;
+            font-weight: 700;
+            @include pad{
+               font-size: $font-48; 
+            }
+            @include iphone{
+                font-size: $font-24;
+            }
+        }
+        .text{
+            font-size: $font-32;
+            font-weight: 700;
+            @include pad{
+                font-size: $font-16;
+            }
+        }
+        .btn-more {
+            width: 216px;
+        }
+    }
+}
+// 優惠券結束
+// 我的收藏開始
+.adminFavorite{
+    @include pad{
+        padding-bottom: 120px !important;
+    }
+    .favorite-item{
+        img{
+            opacity: .87;
+        }
+         a:hover img{
+         opacity: 1;
+         transform:scale(1.03);
+         transition: .3s;
+        }
+        .img{
+            overflow: hidden !important;
+        }
+        .brand-e{
+            font-size: $font-14;
+            font-weight: 700;
+            opacity: .6;
+            font-family: 'Roboto', sans-serif !important;
+            letter-spacing: .15rem;
+        }
+        .brand-c{
+            font-size: $font-16;
+        }
+        .btn-more{
+           width: 216px; 
+           @include pad{
+               width: 100% !important;
+           }
+        }
+        .form-select{
+            border: 1px solid rgba(255,255,255,.2);
+        }
+        .form-select:hover{
+            border:1px solid $primary;
+        }
+    }
+}
+// 我的收藏結束
+// 個人檔案開始
+.adminProfile{
+   .profile{
+       .form-control,.form-select{
+           border-bottom: 1px solid rgba(255,255,255,.38) !important;
+           border-radius: 0%;
+       }
+       .form-control:focus,.form-select:focus{
+           border:none !important;
+           box-shadow: none !important;
+           border-bottom: 2px solid $primary !important ;
+       }
+       .pad-space{
+           @include pad{
+               margin-bottom: 24px !important;
+           }
+       }
+   } 
+   .card{
+      @include iphone{
+          padding: 32px 16px !important;
+      }
+   }
+   .btn-clear,.btn-save{
+           @include iphone{
+               padding-left: 0px !important;
+               padding-right: 0px !important;
+               width: 100% !important;    
+           }
+       }
+}
+// 個人檔案結束
+// 訂單詳情開始
+.adminOrder-dital{
+    @include pad{
+        padding-bottom: 120px !important;
+    }
+    .breadcrumb-item + .breadcrumb-item::before{
+        padding-left: 0.5rem;
+    }
+    .dital-title{
+        font-size: $font-32;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 500;
+    }
+    
+    .tr-data{
+        border-bottom: 8px solid rgba(255,255,255,.08);
+    }
+    .card-body,.card-header{
+        @include iphone{
+            padding: 16px !important;
+        }
+        .brand-e{
+            font-size: $font-14;
+            font-weight: 700;
+            opacity: .6;
+            font-family: 'Roboto', sans-serif !important;
+            letter-spacing: .15rem;
+        }
+        .brand-c{
+            font-size: $font-16;
+        }
+    }
+    thead,.card-header{
+         background: rgba(199, 167, 128, .05);
+    }
+    .check-item th {
+        color: rgba(255, 255, 255, 0.4);
+        @include iphone{
+            width: 40% !important;
+        }
+    }
+    .img-1{
+        background: url(../img/favorite1.jpg)no-repeat;
+        background-position: center center;
+        background-size:cover;
+        height: 180px;
+        @include pad{
+            background: url(../img/favorite1-pad.jpg)no-repeat;
+            height: 60px;
+        }
+    }
+    .img-2{
+        background: url(../img/favorite2.jpg)no-repeat;
+        background-position: center center;
+        background-size:cover;
+        height: 180px;
+        @include pad{
+            background: url(../img/favorite2-pad.jpg)no-repeat;
+            height: 60px;
+        }
+    }
+    .img-3{
+        background: url(../img/favorite3.jpg)no-repeat;
+        background-position: center center;
+        background-size:cover;
+        height: 180px;
+        @include pad{
+            background: url(../img/favorite3-pad.jpg)no-repeat;
+            height: 60px;
+        }
+    }
+    .img-width{
+        width: 18%;
+        @include pad{
+            width: 12%;
+        }
+    }
+}
+// 訂單詳情結束
+
+.adminOrder .card {
+    padding: 0px !important;
+}

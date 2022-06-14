@@ -1,0 +1,138 @@
+// banner開始
+.story-banner{
+    background: url(../img/story-banner.png)no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+     @include iphone{
+        height: 80vh;
+        margin-bottom: 160px !important;
+    }
+     h2{
+        font-size: $font-48;
+        @include iphone{
+            font-size: $font-40;
+        }        
+    }
+    
+}
+.story{
+    @include pad{
+        padding-bottom: 120px !important;
+    }
+    .txt{
+        h4{
+            font-size: $font-32;
+            letter-spacing: .01rem;
+            font-weight: 500;
+            position:relative;
+            @include pad{
+                font-size: $font-20;
+                margin-bottom: 32px !important;
+            }
+        }
+        .number{
+            position: relative;
+            margin-left: 80px !important;
+            color: rgba(255,255,255,.4);
+            @include pad{
+                margin-bottom: 32px !important;
+            }
+        }
+        .number::before{
+            content: '';
+            position: absolute;
+            width: 56px;
+            height: 1px;
+            background-color: rgba(255,255,255,.4);
+            top: 50%;
+            left: -80px;
+        }
+    }
+    .img-1{
+        background: url('../img/story-1.jpg')no-repeat;
+        background-position:center center  ;
+        background-size: cover;
+        height: 280px;
+         @include pad{
+            height: 200px;
+        }
+    }
+    .img-2{
+        background: url('../img/story-2.jpg')no-repeat;
+        background-position:center center  ;
+        background-size: cover;
+        height: 280px;
+         @include pad{
+            height: 200px;
+        }
+    }
+    .img-3{
+        background: url('../img/story-3.jpg')no-repeat;
+        background-position:center center  ;
+        background-size: cover;
+        height: 280px;
+         @include pad{
+            height: 200px;
+        }
+    }
+    .img-4{
+        background: url('../img/story-4.jpg')no-repeat;
+        background-position:center center  ;
+        background-size: cover;
+        height: 280px;
+         @include pad{
+            height: 200px;
+        }
+    }
+    .item-box{
+        @include iphone{
+            position: relative;
+            flex-direction: column-reverse;
+            
+        }
+    }
+    .item-box2{
+        @include iphone{
+            position: relative;
+             flex-direction: column-reverse !important;
+            
+        }
+    }
+    
+    .story-year{
+        @include iphone{
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        h3{
+            position:relative;
+            @include pad{
+                font-size: $font-32;
+            }
+            @include iphone{
+                font-size: $font-24;
+            }
+        }
+        h3::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 5px;
+            height:85%;  
+            background:rgba(255,255,255,.16);
+            top: 15%;
+            left: 50%;
+            @include pad{
+                top:12%;
+            }
+            @include iphone{
+                top:8%;
+                height:90%; 
+            }
+        }
+    }
+}
+    

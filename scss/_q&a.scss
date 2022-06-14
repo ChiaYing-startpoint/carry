@@ -1,0 +1,41 @@
+// banner開始
+.qa-banner{
+    background: url(../img/q&a-banner.png)no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    @include iphone{
+        height: 80vh;
+        margin-bottom: 160px !important;
+    }
+     h2{
+        font-size: $font-48;
+        @include iphone{
+            font-size: $font-40;
+        }        
+    }
+}
+.qa{
+    padding-bottom: 120px !important;
+    .accordion-button{
+        background:rgba(255, 255, 255, 0.08);
+    }
+    .accordion-button::before{
+        content: '';
+        display: block;
+        position:absolute;
+        width: 50px;
+        background:rgba(255, 255, 255, 0.05);
+        left: 0;
+        top:0;
+        bottom: 0;
+    }
+    .accordion-button:hover{
+        background:rgba(199, 167, 128, 0.08);
+    }
+    .accordion-button:not(.collapsed) {
+        color: #b39673;
+        background-color:rgba(199, 167, 128, 0.08);
+        box-shadow: none !important;
+    }
+}

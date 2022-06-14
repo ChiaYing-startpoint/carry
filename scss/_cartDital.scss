@@ -1,0 +1,235 @@
+.cart-dital{
+    margin-top: 92px;
+    background: rgba(255,255,255,.08);
+    @include pad{
+        padding-bottom: 120px !important;
+    }
+    @include iphone{
+        margin-top: 80px;
+    }
+    h3{
+        font-family:'Noto Sans TC', sans-serif ;
+        font-size: $font-32;
+        letter-spacing: .05rem;
+        font-weight: 700;
+        color: rgba(255,255,255,.4);
+        @include iphone{
+            font-size: $font-24;
+        }
+    }
+    .card{
+        border: 2px solid rgba(255,255,255,.38) !important;
+        h4{
+           letter-spacing: .05rem; 
+        }
+        .btn{
+            font-size: $font-24;
+            font-weight: 500;
+        }
+       
+    }
+     .btn-close{
+            width: .5em !important;
+            height: .5em !important;
+        }
+}
+
+//  左側購物車明細開始
+.cart-card{
+    @include pad{
+        margin-bottom: 56px !important;
+    }
+    @include iphone{
+        margin-bottom: 48px !important;
+    }
+    .cicle{
+        font-size: 12px;
+        color: rgba(255,255,255,.38);
+        
+    }
+    li a{
+        display:block;
+        width:100% !important ;
+    }
+    .cicle{
+       width:100% !important ;
+        position: relative; 
+    }
+    .cicle-first::after{
+        content: '';
+        position: absolute;
+        width: 94%;
+        height: 2px; 
+        background:rgba(255, 255, 255,.38);
+        left:5%;
+        right: 5%;
+        top:50%;
+    }
+}
+.cart-item{
+    position:relative;
+    @include iphone{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .imgtext-box{
+        @include iphone{
+            margin-bottom: 16px !important;
+        }
+    }
+    .add-box{
+        @include iphone{
+            width: 100% !important;
+            margin-bottom: 32px !important;
+        }
+    }
+    h4{
+        font-size: $font-16;
+    }
+    p{
+        font-size:$font-14;
+        font-weight: 700;
+        opacity: .6;
+        font-family: 'Roboto', sans-serif !important;
+        letter-spacing: .15rem;
+    }
+    img{
+        opacity: .87;
+    }
+    a:hover img{
+        opacity: 1;
+        transform:scale(1.03);
+        transition: .3s;
+    }
+    .img{
+        overflow: hidden !important;
+    }
+    .price{
+       font-size: $font-16;
+       opacity: 1;
+       @include iphone{
+           align-self: flex-end;
+       }
+       
+    }
+    .btn-close{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+    .btn-close:hover{
+        color:$primary !important;
+    }
+}
+// 左側購物車明細結束
+// 左側付款方式開始
+.payment{
+    .payment-pad-space{
+        margin-bottom: 0 !important;
+    }
+    .cicle-finsh::after{
+        background:$primary;
+    }
+    .payment-method,.payment-invoice{
+        .card{
+            border: 1px solid rgba(255, 255, 255,.38)!important;
+        }
+        .card-credit{
+            border: 1px solid $primary!important;
+        }
+        a:hover .card-hover{
+            border: 1px solid $primary !important;
+            background:rgba(255, 255, 255,.08)!important;
+        }
+    }
+    .payment-method{
+        p{
+            @include iphone{
+                font-size: $font-14;
+            }
+        }
+        .card-body{
+            padding: 16px !important;
+            @include iphone{
+                padding: 8px 0px !important;
+            }
+        }
+    }
+    .payment-invoice{
+        p{
+            font-size: $font-14;
+        }
+        .card-body{
+             padding: 16px !important;
+              @include iphone{
+                padding: 8px 0px !important;
+            }
+        }
+    }
+    .btn-back,.btn-next{
+        @include iphone{
+           padding-left: 0px !important;
+           padding-right: 0 !important;
+           width: 100% !important;
+        }
+    }
+
+}
+// 左側付款方式結束
+// 左側確認資料開始
+.check{
+    .check-item{
+        border: none !important;
+        .card-header{
+            background: rgba(199, 167, 128, .05);
+            @include iphone{
+                padding: 16px !important;
+            }
+        }
+        .card-body{
+            @include iphone{
+               padding: 16px !important; 
+            }
+        }
+        th{
+            color: rgba(255, 255, 255,.4);
+            @include iphone{
+                width: 40% !important;
+            }
+        }
+    }
+    .btn-finsh,.btn-renew{
+        @include iphone{
+           padding-left: 0px !important;
+           padding-right: 0 !important;
+           width: 100% !important;
+        }
+    }
+}
+// 左側確認資料結束
+// 訂購成功開始
+.welldown{
+   .icon-check{
+       font-size: 160px;
+       @include iphone{
+           font-size: 104px;
+       }
+   } 
+   h3{
+       font-size: $font-64;
+       @include iphone{
+           font-size: $font-32;
+       }
+   }
+   p{
+       @include iphone{
+           font-size: $font-14;
+       }
+   }
+   .btn-buy{
+       @include iphone{
+           width: 100% !important;
+       }
+   }
+}
+// 訂購成功結束
