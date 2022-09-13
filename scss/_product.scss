@@ -1,0 +1,70 @@
+// banner開始
+.product-banner{
+    background: url(../img/product-banner.png)no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 50vh;
+    margin-top: 92px;
+    @include xl{
+        background-position: 65% 50%;
+    }
+    @include pad{
+        background: url(../img/product-banner-pad.png)no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    @include iphone{
+        height: 60vh;
+        margin-top: 80px;
+        margin-bottom: 160px !important;
+    }
+     h2{
+        
+        font-size: $font-48;
+        @include iphone{
+            font-size: $font-40;
+        }        
+    }
+}
+// banner結束
+.product-card{
+    .container-fluid{
+        background: rgba(255,255,255,.08);
+    }
+    .text{
+        @include pad{
+            padding-bottom: 32px !important;
+            text-align: center !important;
+        }
+        @include iphone{
+            padding: 16px 16px 24px 16px !important;
+        }
+    }
+    .text span{
+        @include pad{
+            display: block !important;
+            margin-top: 4px !important;
+        }
+    }
+    a:hover .text{
+         background: rgba(199, 167, 128, .08);
+    }
+    .btn-tune{
+        background: rgba(255,255,255,.16);
+    }
+    .btn-tune:hover{
+        background: rgba(255,255,255,.32);
+    }
+    
+}
+.product-pagination{
+    @include pad{
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+    }
+    @include iphone{
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+    }
+}
+

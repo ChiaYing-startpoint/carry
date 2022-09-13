@@ -1,0 +1,716 @@
+.index-header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+    
+    .index-page{
+        @include pad{
+            display: none !important;
+        }
+    }
+    .nav-icon{
+       .search-icon,.shop-icon{
+           @include iphone{
+               display: none;
+           }
+       } 
+    }
+   .dropdown{
+        @include pad{
+            display: none;
+        }
+    }
+    h1 a{
+        background: url(../img/logo.svg)no-repeat;
+        display: block;
+        width: 160px;
+        height: 40px;
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    h1 a:hover{
+        opacity: .6;
+    }
+    a{
+      font-family: 'Roboto', sans-serif !important; 
+    }
+    .dropdown-menu-dark{
+        background: $secondary !important;
+        font-size: $font-14 !important;
+        color: rgba(255, 255, 255, .87) !important;
+        box-shadow: 0 0 15px 2px  rgba(255, 255, 255, 0.2) !important;
+        .dropdown-item:hover{
+            color: $primary !important;
+        }
+    } 
+}
+// 漢堡選單開始
+.hamber{
+    display: none;
+    @include pad{
+        display: block;
+    }
+}
+.hamber-content{
+    position:fixed;
+    top:0;
+    left: 0;
+    bottom:0;
+    width: 100% !important;
+    height: 100% !important;
+    left: -100%;
+    background: $secondary;
+    z-index: 200 !important;
+    transition: all .45s;
+    
+}
+.hamber-content.active{
+    left: 0;
+}
+.hamber-content::before{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.08);
+    z-index: -1;
+}
+// 漢堡選單結束
+// mobile導覽列開始
+.mobile-nav{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    @include iphone{
+        display: block;
+    }
+}
+.mobile-nav::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom:0;
+    position: absolute;
+    background: rgba(199, 167, 128, .05);
+    z-index: -1;
+}
+// mobile導覽列結束
+// modal開始
+
+.modal{
+    padding: 0px !important;
+}
+.modal{
+     .m-header,.modal-body,.m-footer {
+    background: rgba(255,255,255,.16) !important;
+    border:1px solid rgba(255,255,255,.38);
+    }
+    .search-header,.search-body{
+       background: rgba(255,255,255,.16) !important;
+       border:none; 
+    }
+    .search-body{
+        .form-control{
+            border-radius: 0%;
+            background:transparent !important;
+            border:none !important;
+            border-bottom: 2px solid $primary !important ;
+        }
+        .form-control:focus,.form-select:focus{
+            border:none !important;
+            box-shadow: none !important;
+            border-bottom: 4px solid $primary !important ;
+        }
+        .serach-icon{
+            font-size: $font-32;
+        }
+    }
+    .form-text{
+        font-size: $font-12 !important;
+        font-weight: 100 !important;
+    }
+    .m-header{
+        position: relative;
+    }
+    .btn-close{
+        position: absolute;
+        top:16px;
+        right: 16px;
+    }
+    .btn-social{
+        background: rgba(255,255,255,.08);
+        border:1px solid rgba(255,255,255,.6);
+        color: rgba(255,255,255,.6);
+    }
+    .btn-social:hover{
+        border:1px solid $primary;
+        color:  $primary; 
+    }
+   
+}
+.cart-modal.right .modal-dialog{
+    position: fixed !important;
+    right: 0;
+    top:0 !important;
+    bottom: 0 !important;
+    margin: auto;
+    width:100%;
+    height: 100%;
+    transform: translate3d(0%,0,0);
+}
+.cart-modal.right .modal-content { //高滿版
+	height: 100%;
+}
+.sign-modal .modal-dialog{
+    @include iphone{
+        margin: auto;
+    }
+}
+.filter-modal{
+    .accordion-item{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+    .modal-dialog{
+        max-width: 400px !important;
+    }
+}
+.filter-modal.left .modal-dialog{
+    position: fixed !important;
+    left: 0;
+    top:0 !important;
+    bottom: 0 !important;
+    margin: auto;
+    width:100%;
+    height: 100%;
+    transform: translate3d(0%,0,0);
+
+}
+.filter-modal.left .modal-content { //高滿版
+	height: 100%;
+}
+// modal結束
+
+
+// banner開始
+.index-banner{
+    background: url(../img/index-banner1.png)no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    @include pad{
+        margin-bottom: 80px !important;
+    }
+    @include iphone{
+        padding-bottom: 80px !important;
+    }
+    h2{
+        font-size: $font-48;   
+        @include iphone{
+            font-size: $font-24;
+        }     
+    }
+    .banner-number li a{
+        padding: 8px 6px 8px 8px;
+        letter-spacing: .15em;
+        font-size: $font-12;
+        font-weight: 100;
+        font-family: 'Roboto', sans-serif !important; 
+    }
+    .a-circle{
+        border: 1px solid $primary;
+        border-radius: 100%;
+    }
+    .index-btn-shop{
+       padding:4px;
+        border: 1px solid rgba(255, 255, 255, 0.4) ;
+        border-radius: 100%;
+        margin-bottom: 40px;
+    }
+    .index-btn-shop:hover{
+        border: 1px solid $primary ;
+        box-shadow: 0px 0px 4px  $primary;
+    }
+    .index-btn-shop a{
+         padding: 48px 40px;
+         border: 1px solid $primary ;
+         border-radius: 100%;
+         background: rgba(255, 255, 255, 0.08);
+    }
+    .index-btn-shop a:hover{
+         padding: 48px 40px;
+         border: 1px solid white ;
+         border-radius: 100%;
+         background:#000000;
+    }
+   
+}
+// banner結束
+// 新品開始
+.index-newArrival{
+    @include pad{
+        margin-bottom: 100px !important;
+    }
+    @include iphone{
+        margin-bottom: 56px !important;
+    }
+    h3{
+        @include pad{
+            font-size: $font-32 !important;
+            margin-bottom: 72px !important;
+        }
+        @include iphone{
+            font-size: $font-24 !important;
+            margin-bottom: 48px !important;
+        }
+    }
+    .new-card-pad{ //交錯上下空間
+        @include pad{
+            margin-top: 80px !important;
+        }
+        @include iphone{
+            margin-top: 40px !important;
+        }
+    }
+    .p-pad{
+        margin-bottom: 48px !important;
+    }
+}
+.index-newArrival,.product-card{
+    .new-card-item{ //商品卡片共用
+        img{
+            opacity: .87;
+        }
+        h4{
+            font-size: 16px;
+        }
+        p{
+            font-size: 14px;
+           font-weight: 300;
+           opacity: .6;
+        }
+    }
+    a:hover img{
+         opacity: 1;
+         transform:scale(1.03);
+         transition: .3s;
+    }
+    .img{
+        overflow: hidden !important;
+    }
+    
+}
+// 新品結束
+// 熱門商品開始
+.index-hotItem{
+    @include pad{
+        margin-bottom: 100px !important;
+    }
+    @include iphone{
+        margin-bottom: 56px !important;
+    }
+    h3{
+        @include pad{
+            font-size: $font-32 !important;
+            margin-bottom: 72px !important;
+        }
+         @include iphone{
+            font-size: $font-24 !important;
+            margin-bottom: 48px !important;
+        }
+    }
+    li{
+        @include pad{
+            margin-bottom: 56px !important;
+        }
+        @include iphone{
+            margin-bottom: 40px !important;
+        }
+    }
+    li:last-child{
+        @include pad{
+            margin-bottom: 0px !important;
+        }
+        @include iphone{
+            margin-bottom: 0px !important;
+        }
+    }
+    .itemBimg{
+        position: relative;
+    }
+    .item-imgB{
+       background: url(../img/hot1.jpg)no-repeat;
+       height: 70vh;
+       background-position: center center;
+       background-size: cover;
+        @include xl{
+           height: 35vh;
+       }
+       @include pad{
+          height: 30vh; 
+       }
+       @include iphone{
+           position: relative;
+           z-index: -2;
+       }
+   }
+   .item-imgE{
+       background: url(../img/hot2.jpg)no-repeat;
+        height: 70vh;
+       background-position: center center;
+       background-size: cover;
+       @include xl{
+           height: 35vh;
+       }
+       @include pad{
+          height: 30vh; 
+       }
+   }
+    .item-imgR{
+       background: url(../img/hot3.jpg)no-repeat;
+       height: 70vh;
+       background-position: center center;
+       background-size: cover;
+       @include xl{
+           height: 35vh;
+       }
+       @include pad{
+          height: 30vh; 
+       }
+   }
+    .item-imgB:hover::after{
+       content:'';
+       position: absolute;
+       background: $primary;
+       width: 100%;
+       height: 100%;
+       mix-blend-mode: multiply;
+       opacity: .5;
+    }
+   .boxB{
+       background: url(../img/hot1-2.jpg)no-repeat;
+       background-position: center center;
+       background-size: cover;
+       position: absolute;
+       z-index: 2;
+       width: 18vw;
+       height: 36vh;
+       bottom: -40%;
+       right:5%;
+       @include xl{
+           height: 14vh;
+            bottom: -30%;
+       }
+       @include pad{
+          height: 14vh;
+          bottom: -30%; 
+       }
+       @include iphone{
+          width: 40vw; 
+          height: 20vh;
+          bottom: -50%;
+          z-index: -1;
+       }
+   } 
+   .boxE{
+       background: url(../img/hot2-2.jpg)no-repeat;
+       left:5%;
+   } 
+   .boxR{
+       background: url(../img/hot3-2.jpg)no-repeat;
+   } 
+   .boxB:hover::before{
+       content: '';
+       position: absolute;
+       background: $primary;
+       width: 100%;
+       height: 100%;
+       mix-blend-mode: multiply; //ps色彩增值
+       opacity: .5;
+   }
+   .item-fontB{
+       background: url(../img/B.png)no-repeat;
+       background-position: right -50% center;
+       background-size: cover;
+   }
+   .item-fontE{
+       background: url(../img/E.png)no-repeat;
+       background-position: right -50% center;
+       background-size: cover;
+   }
+   .item-fontR{
+       background: url(../img/R.png)no-repeat;
+       background-position: right -50% center;
+       background-size: cover;
+   }
+   .hot-information{
+       margin-top: -240px;
+       position: relative;
+       @include pad{
+          margin-top: -112px; 
+       }
+   }
+   .hotTitle{
+       font-size: $font-56;
+       font-family: 'Roboto', sans-serif !important;
+       font-weight: 700;
+       letter-spacing: .15em; 
+       @include pad{
+           font-size: $font-32;
+           margin-bottom: 128px !important;
+       }
+        @include iphone{
+            font-size: $font-24 !important;
+            margin-top: 160px !important;
+             margin-bottom: 72px !important;
+        }
+   }
+   .text h4{
+       font-size: $font-16 !important;
+   }
+   .text p{
+       opacity: .6;
+       @include pad{
+           margin-bottom: 48px !important;
+       }
+   }
+}
+// 熱門商品結束
+
+// story開始
+.index-story{
+     @include pad{
+        margin-bottom: 100px !important;
+    }
+    @include iphone{
+        margin-bottom: 56px !important;
+    }
+    h3{
+        @include pad{
+            font-size: $font-32 !important;
+            margin-bottom: 72px !important;
+        }
+         @include iphone{
+            font-size: $font-24 !important;
+            margin-bottom: 48px !important;
+        }
+    }
+    overflow-x: hidden; //視窗x軸隱藏
+    .swiper-container {
+        width:100vw !important; //讓版面超出container
+        height: 75vh;
+        @include xl{
+           height: 35vh !important;
+       }
+        @include pad{
+          height: 40vh !important;  
+        }
+        @include iphone{
+            height: 70vh !important;
+        }
+    }
+    .swiper-slide img{
+        width: 100%;
+        height: 75vh !important;
+        @include xl{
+           height: 35vh !important;
+       }
+        @include pad{
+          height: 40vh !important;  
+        }
+        @include iphone{
+            height: 70vh !important;
+        }
+    }
+    .story-item:hover .img-multiply {
+        opacity: .5;
+    }
+}
+// story結束
+// 部落格開始
+.index-blog{
+     @include pad{
+        margin-bottom: 100px !important;
+    }
+    @include iphone{
+        margin-bottom: 56px !important;
+    }
+    h3{
+        @include pad{
+            font-size: $font-32 !important;
+            margin-bottom: 72px !important;
+        }
+         @include iphone{
+            font-size: $font-24 !important;
+            margin-bottom: 48px !important;
+        }
+    }
+    .blog-card:hover .img-multiply{
+        opacity: .5;
+    }
+    .img{
+        position: relative;
+        cursor: pointer;
+    }
+    .swiper3-container {
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+}
+// 支持開始
+.index-support{
+    @include pad{
+        padding: 80px 0px !important;
+    }
+    @include iphone{
+        padding: 56px 0px !important;
+    }
+    background: url(../img/support-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center center;
+    h3{
+        @include pad{
+            margin-bottom: 72px !important; 
+        }
+        @include iphone{
+            margin-bottom: 48px !important;
+            font-size: $font-24;
+        }
+    }
+}
+// 支持結束
+
+// 表尾開始
+.index-footer{
+    // 標語開始
+    .footer-nav{
+        background-color: rgba(199, 167, 128, .04);
+        @include iphone{
+            padding: 0px !important;
+        }
+        ul{
+            @include iphone{
+                flex-direction: column;
+                align-items: center;
+                overflow:hidden;
+                
+            }
+        }
+        li{
+            @include iphone{
+                padding: 16px 0px !important;
+                position: relative;
+                
+            }
+        }
+        li::after{
+            @include iphone{
+                content: '';
+                display: block;
+                background:rgba(255, 255, 255, 0.2);
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: -200%;
+                right:-200%;
+            }
+        }
+        li:last-child::after{
+        @include iphone{
+            display: none;
+        }
+    }
+    }
+    
+    li{
+        font-weight: 100;
+    }
+    // 標語結束
+    .footer-infomation{
+        @include pad{
+            display: none !important;
+        }
+        h5{
+            font-size: $font-18;
+        }
+        .footer-logo a{
+            background: url(../img/footer-logo.svg)no-repeat;
+            display:block;
+            width: 160px;
+            height:40px;
+            text-indent: 101%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .footer-logo a:hover{
+            opacity: .6;
+        }
+    }
+    .footer-social{
+        position:relative;
+        .container{
+            @include pad{
+                padding-top: 108px !important;
+                padding-bottom: 24px !important;
+            }
+            @include iphone{
+                padding-bottom: 200px !important;
+                padding-top: 56px !important;
+            }
+            border-top:1px solid rgba(255, 255, 255, 0.4) ;
+            @include pad{
+                border-top: none ;
+            }
+        }
+        .social-icon{
+            @include iphone{
+                margin-bottom: 40px !important;
+            }
+        }
+        ul{
+            @include iphone{
+                justify-content: center;
+            }
+        }
+        p{
+            font-size: $font-14;
+            opacity: .6;
+            @include iphone{
+                text-align: center !important;
+                margin-bottom: 0 !important;
+            }
+        }
+        .btn-top{
+            position: absolute;
+            bottom:16px;
+            right: 16px;
+            background: rgba(255, 255, 255,.12);
+            width: 48px;
+            height: 48px;
+            z-index: 10;
+            @include pad{
+                bottom:80px;
+            }
+            @include iphone{
+                bottom:92px;
+                right: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+        }
+        
+    }
+}
+// 表尾結束
+
+
+    

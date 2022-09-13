@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./scss/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>首頁</title>
+</head>
+<body>
+<!-- 表頭開始 -->
+<header class="index-header py-5 ">
+    <div class="container  d-flex align-items-center justify-content-between ">
+        <div class="d-flex align-items-center">
+            <h1 class="me-96"><a href="index.html">carry</a></h1>
+            <ul class="d-flex index-page">
+                <li class="me-6 "><a href="product.html">SHOP</a></li>
+                <li class="me-6"><a href="story.html">STORY</a></li>
+                <li class="me-6"><a href="blog.html">BLOG</a></li>
+                <li><a href="q&a.html">Q&A</a></li>
+            </ul>
+        </div>
+        <ul class="d-flex nav-icon ">
+            <li class="me-5 search-icon">
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    <span class="material-icons">search</span>
+                </a>
+            </li>
+            <li class=" dropdown me-5 rounded-0">
+                <a href="" class="person-icon" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-icons">person</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end rounded-0 py-2 "
+                    aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="adminOrder.html">訂單查詢</a></li>
+                    <li><a class="dropdown-item" href="adminTicket.html">優惠券查詢</a></li>
+                    <li><a class="dropdown-item" href="adminFavorite.html">我的收藏</a></li>
+                    <li><a class="dropdown-item" href="adminProfile.html">個人檔案</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">登入</a>
+                    </li>
+                    <li><a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">註冊</a></li>
+                </ul>
+             </li>
+            <!-- pad以下漢堡選單開始 -->
+            <li class="hamber me-md-5">
+                <a href="" class=" d-flex flex-column justify-content-between ">
+                    <span class="material-icons">menu</span>
+                </a>
+            </li>
+            <!-- pad以下漢堡選單結束 -->
+            <li class="shop-icon">
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="material-icons">shopping_cart</span>
+                </a>
+            </li>
+        </ul>
+    </div>    
+</header>
+<!-- 表頭結束 -->
+<!-- pad漢堡選單內容開始 -->
+<nav class="hamber-content  ">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card  bg-transparent border-0">
+                    <h5 class="card-header text-end py-4 border-0">
+                        <button type="button" class="btn-close btn-close-hamber active px-0 btn-close-white" aria-label="Close"></button>
+                    </h5>
+                    <div class="card-body border-0 ">
+                        <ul>
+                            <li class="mb-3"><a href="product.html">SHOP</a></li>
+                            <li class="mb-3"><a href="story.html">STORY</a></li>
+                            <li class="mb-3"><a href="blog.html">BLOG</a></li>
+                            <li><a href="q&a.html">Q&A</a></li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li class="mb-3"><a href="adminOrder.html">訂單查詢</a></li>
+                            <li class="mb-3"><a href="adminTicket.html">優惠券查詢</a></li>
+                            <li class="mb-3"><a href="adminFavorite.html">我的收藏</a></li>
+                            <li><a href="adminProfile.html">個人檔案</a></li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li class="mb-3"><a href="">疑難排解</a></li>
+                            <li class="mb-3"><a href="">關於我們</a></li>
+                            <li><a href="">聯絡我們</a></li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li class="mb-2"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">登入</a></li>
+                            <li><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2">註冊</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- pad漢堡選單內容結束 -->
+<!-- mobile導覽列開始 -->
+<nav class="mobile-nav w-100 py-4 bg-secondary">
+    <div class="container">
+        <div class="row ">
+            <div class="col">
+                <ul class="d-flex justify-content-between align-items-between">
+                    <li>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="d-flex flex-column justify-content-center align-items-center text-op60 ">
+                            <span class="material-icons">search</span>
+                            搜尋
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-flex flex-column justify-content-center align-items-center text-op60">
+                            <span class="material-icons">shopping_cart</span>
+                            購物車
+                        </a>
+                    </li>
+                    <li>
+                        <a href="adminFavorite.html" class="d-flex flex-column justify-content-center align-items-center text-op60">
+                            <span class="material-icons">
+                                favorite_border
+                            </span>
+                            收藏
+                        </a>
+                    </li>
+                    <li>
+                        <a href="adminOrder.html" class="d-flex flex-column justify-content-center align-items-center text-op60">
+                            <span class="material-icons">person</span>
+                            會員
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- mobile導覽列結束 -->
+<!-- 手機出現漢堡選單開始 -->
+
+<!-- 搜尋Modal開始 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xxl-down">
+        <div class="modal-content">
+            <div class="modal-header search-header">
+                <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body search-body h-100 text-primary">
+                <div class="d-flex justify-content-center align-items-center h-100 ">
+                    <form class="form-floating mb-4  w-50">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput ">
+                            
+                            <h4 class=" d-flex align-items-center fw-bold">
+                                <span class="material-icons serach-icon me-2 ">search</span>
+                                SEARCH
+                            </h4>
+                        </label>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 搜尋Modal結束 -->
+<!-- 登入Modal開始 -->
+<div class="modal sign-modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class=" m-header px-5 py-4  ">
+                <h5 class="modal-title text-center " id="exampleModalLabel">登入</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-7 px-5">
+                <form action="">
+                    <select class="form-select form-select-lg mb-3 py-3" aria-label=".form-select-lg example">
+                        <option selected>台灣地區（+886）</option>
+                        <option value="1">土耳其 ( +90 )</option>
+                        <option value="2">剛果 ( +242 )</option>
+                        <option value="3">科索夫 ( +383 )</option>
+                    </select>
+                    <input class="form-control form-control-lg py-3 mb-1" type="tel" placeholder="電話號碼"
+                        aria-label=".form-control-lg example">
+                    <div id="emailHelp" class="form-text text-light mb-4">我們會傳送簡訊，確認您的電話號碼。 這可能會產生一般簡訊和數據傳輸費用。</div>
+                    <button type="button" class="btn btn-primary w-100 py-4" data-bs-dismiss="modal">下一步</button>
+
+                </form>
+            </div>
+            <div class="m-footer px-5 py-4  ">
+                <h5 class="modal-title text-center " id="exampleModalLabel">其他方式登入</h5>
+            </div>
+            <div class="modal-body py-7 px-5">
+                <button type="button"
+                    class="btn btn-social  w-100 py-4 mb-3 d-flex align-items-center justify-content-start "
+                    data-bs-dismiss="modal"><i class="fab fa-facebook-f fa-lg "></i><span
+                        class="w-100">使用facebook登入</span></button>
+                <button type="button"
+                    class="btn btn-social  w-100 py-4 mb-3 d-flex align-items-center justify-content-start"
+                    data-bs-dismiss="modal"><i class="fab fa-google fa-lg "></i><span
+                        class="w-100">使用google登入</span></button>
+                <button type="button" class="btn btn-social  w-100 py-4 d-flex align-items-center justify-content-start"
+                    data-bs-dismiss="modal"><i class="fab fa-apple fa-lg"></i><span
+                        class="w-100">使用apple登入</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 登入Modal結束 -->
+<!-- 註冊Modal開始 -->
+<div class="modal sign-modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class=" m-header px-5 py-4  ">
+                <h5 class="modal-title text-center " id="exampleModalLabel">註冊</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-7 px-5">
+                <form action="">
+                    <select class="form-select form-select-lg mb-3 py-3" aria-label=".form-select-lg example">
+                        <option selected>台灣地區（+886）</option>
+                        <option value="1">土耳其 ( +90 )</option>
+                        <option value="2">剛果 ( +242 )</option>
+                        <option value="3">科索夫 ( +383 )</option>
+                    </select>
+                    <input class="form-control form-control-lg py-3 mb-1" type="tel" placeholder="電話號碼"
+                        aria-label=".form-control-lg example">
+                    <div id="emailHelp" class="form-text text-light mb-4">我們會傳送簡訊，確認您的電話號碼。 這可能會產生一般簡訊和數據傳輸費用。</div>
+                    <button type="button" class="btn btn-primary w-100 py-4" data-bs-dismiss="modal">下一步</button>
+
+                </form>
+            </div>
+            <div class="m-footer px-5 py-4  ">
+                <h5 class="modal-title text-center " id="exampleModalLabel">其他方式登入</h5>
+            </div>
+            <div class="modal-body py-7 px-5">
+                <button type="button"
+                    class="btn btn-social  w-100 py-4 mb-3 d-flex align-items-center justify-content-start "
+                    data-bs-dismiss="modal"><i class="fab fa-facebook-f fa-lg "></i><span
+                        class="w-100">使用facebook登入</span></button>
+                <button type="button"
+                    class="btn btn-social  w-100 py-4 mb-3 d-flex align-items-center justify-content-start"
+                    data-bs-dismiss="modal"><i class="fab fa-google fa-lg "></i><span
+                        class="w-100">使用google登入</span></button>
+                <button type="button" class="btn btn-social  w-100 py-4 d-flex align-items-center justify-content-start"
+                    data-bs-dismiss="modal"><i class="fab fa-apple fa-lg"></i><span
+                        class="w-100">使用apple登入</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 註冊Modal結束 -->
+<!-- 購物車Modal開始 -->
+<div class="modal cart-modal right fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="m-header text-center  px-5 py-4">
+                <h5 class="modal-title" id="exampleModalLabel">購物車</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-5 px-5">
+                <!-- 卡片開始 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cart-item d-flex justify-content-between align-items-center ">
+                            <!-- 圖文區開始 -->
+                            <a href="" class="w-100">
+                                <div class=" d-flex  align-items-center imgtext-box ">
+                                    <div class="img ">
+                                        <img src="./img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="txt ms-4 w-75">
+                                        <p class="mb-1">HUTTON</p>
+                                        <h4 class="mb-5">法式迷你手提包</h4>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">黑色x1</p>
+                                            <p class="price mb-0 ">NT$ 1,980</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 圖文區結束 -->
+                        </div>
+                        <hr>
+                        <div class="cart-item d-flex justify-content-between align-items-center ">
+                            <!-- 圖文區開始 -->
+                            <a href="" class="w-100">
+                                <div class=" d-flex  align-items-center imgtext-box ">
+                                    <div class="img ">
+                                        <img src="./img/cart2.jpg" alt="">
+                                    </div>
+                                    <div class="txt ms-4 w-75">
+                                        <p class="mb-1">PLAIAGE </p>
+                                        <h4 class="mb-5">經典迷你手提包</h4>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">黑色x1</p>
+                                            <p class="price mb-0 ">NT$ 3,750</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 圖文區結束 -->
+                        </div>
+                        <hr>
+                        <div class="cart-item d-flex justify-content-between align-items-center">
+                            <!-- 圖文區開始 -->
+                            <a href="" class="w-100">
+                                <div class=" d-flex  align-items-center imgtext-box ">
+                                    <div class="img ">
+                                        <img src="./img/cart3.jpg" alt="">
+                                    </div>
+                                    <div class="txt ms-4 w-75">
+                                        <p class="mb-1">HOESER</p>
+                                        <h4 class="mb-5">徽章撞色托特手袋</h4>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0">黑色x1</p>
+                                            <p class="price mb-0 ">NT$ 1,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 圖文區結束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片結束 -->
+                <hr class="my-4">
+                <div class="row mb-5 justify-content-end">
+                    <div class="col-8">
+                        <div class="d-flex justify-content-between text-primary">
+                            <h5 class="mb-0 me-7">總計</h5>
+                            <h5 class="mb-0">NT$ 7,230</h5>
+                        </div>
+                    </div>
+                </div>
+                <a href="cartDital.html" class="btn btn-primary py-4  w-100 fw-bold">前往結帳</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 購物車Modal結束 -->
+
+
+
+<main>
+    <!-- banner開始 -->
+    <section class="index-banner mb-160  ">
+        <div class="container h-100">
+            <div class="row  align-items-end  h-100" >
+                <div class="col-2  order-1 order-sm-2 order-lg-1">
+                    <ul class="banner-number  ">
+                        <li class="mb-3"><a href="" class="a-circle">01</a></li>
+                        <li class="mb-3"><a href="" class=" ">02</a></li>
+                        <li><a href="" class=" ">03</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 order-2 order-sm-1 ">
+                    <div class="d-flex flex-column justify-content-end  align-items-end">
+                        <h2 class=" text-end text-primary mb-7 fw-bold">RANDOM AND BEYOND<br>VARIETY IS<br>THE SPICE OF LIFE</h2>
+                        <div class="index-btn-shop d-flex justify-content-center align-items-center">
+                            <a href="product.html">shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner結束 -->
+    <!-- 新品開始 -->
+    <section class="index-newArrival mb-200">
+        <div class="container ">
+            <h3 class="mb-128 text-primary text-center fw-bold">NEW ARRIVAL</h3>
+            <div class="row  justify-content-around g-0  ">
+                <div class="col-5 col-md-4">
+                    <a href="product.html">
+                        <div class="new-card-item ">
+                            <div class="img mb-5">
+                                <img src="./img/new1.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4>SPROUSE 輕尚多用鱷魚皮夾</h4>
+                                <p class="mb-0">NT. 4,550</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4">
+                    <a href="product.html">
+                        <div class="new-card-item new-card-pad mt-160 ">
+                            <div class="img mb-5">
+                                <img src="./img/new2.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4>GERBER 塗層優雅托特包</h4>
+                                <p class="mb-0">NT. 2,880</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row  justify-content-around g-0 ">
+                <div class="col-5 col-md-4">
+                    <a href="product.html">
+                        <div class="new-card-item ">
+                            <div class="img mb-5">
+                                <img src="./img/new3.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4>SPROUSE 輕尚多用鱷魚皮夾</h4>
+                                <p class="mb-96 p-pad">NT. 4,550</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4">
+                    <a href="product.html">
+                        <div class="new-card-item new-card-pad mt-160 ">
+                            <div class="img mb-5">
+                                <img src="./img/new4.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4>GERBER 塗層優雅托特包</h4>
+                                <p class="mb-0">NT. 2,880</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 新品結束 -->
+    <!-- 熱門商品開始 -->
+    <section class="index-hotItem mb-200">
+        <h3 class="mb-128 text-primary text-center fw-bold">HOT ITEM</h3>
+        <div class="container-fluid ">
+            <ul>
+                <!-- B開始 -->
+                <li class="mb-160">
+                    <div class="row ">
+                        <div class="col-md-4 item-fontB">
+                        </div>
+                        <div class="col-md-8 itemBimg px-0">
+                            <div class="item-imgB"></div>
+                            <div class="boxB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container hot-information">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="hotTitle mb-160">BACK TO CLASSIC</h4>
+                                <div class="text">
+                                    <h4>SPROUSE 輕尚多用鱷魚皮夾</h4>
+                                    <p class="mb-56">風格與品質並存的藝術品</p>
+                                    <a href=""
+                                        class="btn btn-outline-primary btn-more py-4 rounded-0  d-flex justify-content-center align-items-center">MORE<span
+                                            class="material-icons icon-more ms-5">
+                                            arrow_right_alt
+                                        </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- B結束 -->
+                <!-- E開始 -->
+                <li class="mb-160">
+                    <div class="row flex-row-reverse">
+                        <div class="col-md-4  item-fontE">
+                        </div>
+                        <div class="col-md-8 itemBimg px-0">
+                            <div class="item-imgB item-imgE"></div>
+                            <div class="boxB boxE">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container hot-information">
+                        <div class="row  ">
+                            <div class="col d-flex flex-column align-items-md-end  ">
+                                <h4 class="hotTitle mb-160">EMBRACE CONFIDENCE</h4>
+                                <div class="text text-end">
+                                    <h4>SIGNATUR 緹花多用柏金包</h4>
+                                    <p class="mb-56">自由貼近自我的面貌</p>
+                                    <a href=""
+                                        class="btn btn-outline-primary btn-more py-4 rounded-0  d-flex justify-content-center align-items-center">MORE<span
+                                            class="material-icons icon-more ms-5">
+                                            arrow_right_alt
+                                        </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- E結束 -->
+                <!-- R開始 -->
+                <li>
+                    <div class="row">
+                        <div class="col-md-4 item-fontR">
+                        </div>
+                        <div class="col-md-8 itemBimg px-0">
+                            <div class="item-imgB item-imgR"></div>
+                            <div class="boxB boxR">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container hot-information">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="hotTitle mb-160">RANDOM BEYOND</h4>
+                                <div class="text">
+                                    <h4>RILEY 輕尚高雅手提包</h4>
+                                    <p class="mb-56">簡約隨興中性的風格</p>
+                                    <a href=""
+                                        class="btn btn-outline-primary btn-more py-4 rounded-0  d-flex justify-content-center align-items-center">MORE<span
+                                            class="material-icons icon-more ms-5">
+                                            arrow_right_alt
+                                        </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- R結束 -->
+            </ul>
+        </div>
+    </section>
+    <!-- 熱門商品結束 -->
+    <!-- story開始 -->
+    <section class="index-story mb-200">
+        <div class="container ">
+            <h3 class="mb-128 text-primary text-center fw-bold">OUR STORY</h3>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="story-item">
+                            <a href="story.html">
+                                <img src="./img/story1.jpg" alt="">
+                                <div class="img-multiply"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="story-item">
+                            <a href="story.html">
+                                <img src="./img/story2.jpg" alt="">
+                                <div class="img-multiply"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="story-item">
+                            <a href="story.html">
+                                <img src="./img/story3.jpg" alt="">
+                                <div class="img-multiply"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="story-item">
+                            <a href="story.html">
+                                <img src="./img/story4.jpg" alt="">
+                                <div class="img-multiply"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="story-item">
+                            <a href="story.html">
+                                <img src="./img/story5.jpg" alt="">
+                                <div class="img-multiply"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- story結束 -->
+    <!-- 部落格開始 -->
+    <section class="index-blog mb-200">
+        <div class="container ">
+            <h3 class="mb-128 text-primary text-center fw-bold">BLOG</h3>
+            <!-- Slider main container -->
+            <div class="row row-cols-1 row-cols-md-3 mb-56" id="swiper1">
+                <!-- Additional required wrapper -->
+                
+                    <!-- Slides -->
+                    <div class="col">
+                        <a href="blog.html">
+                            <div class="card blog-card  bg-secondary rounded-0 border-0">
+                                <div class="img mb-3">
+                                    <img src="./img/blog1.jpg" class="card-img-top rounded-0" alt="...">
+                                    <div class="img-multiply"></div>
+                                </div>
+                                <div class="card-body bg-secondary p-0 ">
+                                    <small>24 JUL 2020</small>
+                                    <h5 class="card-title mt-4 mb-3">產品生命週期</h5>
+                                    <p class="card-text text-op60 mb-0">產品生命週期（product life cycle），簡稱PLC， 是產品的市場壽命，即一種新產品從開始進入市場 到被市場淘汰...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="blog.html">
+                            <div class="card blog-card  bg-secondary rounded-0 border-0">
+                                <div class="img mb-3">
+                                    <img src="./img/blog2.jpg" class="card-img-top rounded-0" alt="...">
+                                    <div class="img-multiply"></div>
+                                </div>
+                                <div class="card-body bg-secondary p-0 ">
+                                    <small>30 JUL 2020</small>
+                                    <h5 class="card-title mt-4 mb-3">包包的誕生</h5>
+                                    <p class="card-text text-op60 mb-0">現代背包源自歐洲，13世紀時，歐洲各國的軍隊， 開始採用麻質或棉亞麻混紡的帆布，來加強防禦工 事，後來他們用這...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="blog.html">
+                            <div class="card blog-card  bg-secondary rounded-0 border-0">
+                                <div class="img mb-3">
+                                    <img src="./img/blog3.jpg" class="card-img-top rounded-0" alt="...">
+                                    <div class="img-multiply"></div>
+                                </div>
+                                <div class="card-body bg-secondary p-0 ">
+                                    <small>15 JUL 2020</small>
+                                    <h5 class="card-title mt-4 mb-3">最好的搭配</h5>
+                                    <p class="card-text text-op60 mb-0">採用輕便耐用的布料製成，以達到重量輕、攜帶容 易、方便收藏的需求，與有支架的背包相比，較不 能保持一個固定的形狀...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+            </div>
+            <a href="blog.html"
+                class="btn btn-outline-primary btn-more py-4 rounded-0  d-flex justify-content-center align-items-center">MORE<span
+                    class="material-icons icon-more ms-5">
+                    arrow_right_alt
+                </span>
+            </a>
+        </div>
+    </section>
+    <!-- 部落格結束 -->
+    <!-- 支持開始 -->
+    <section class="index-support pt-160 pb-200">
+        <div class="container">
+            <h3 class="mb-128 text-primary text-center fw-bold">SUPPORT</h3>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-0 gy-6 gy-md-64">
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support1.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support2.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support3.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support4.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support5.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support6.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support7.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img">
+                        <img src="./img/support8.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 支持結束 -->
+</main>
+<!-- 表尾開始 -->
+<footer class="index-footer">
+    <!-- 標語開始 -->
+    <section class="footer-nav py-8" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="d-flex justify-content-around">
+                        <li class="d-flex align-items-center"><span class="material-icons me-2 ">
+                            gpp_good
+                        </span>安全支付</li>
+                        <li class="d-flex align-items-center"><span class="material-icons me-2">
+                            directions_bus
+                        </span>全台免運費</li>
+                        <li class="d-flex align-items-center"><span class="material-icons me-2">
+                            query_builder
+                        </span>2年保固服務</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 標語結束 -->
+    <section class="footer-infomation py-128">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-8">
+                    <ul class="d-flex justify-content-between">
+                        <li>
+                            <h5 class="text-primary mb-5">疑難排解</h5>
+                            <p class="mb-3"><a href="">如何下單</a></p>
+                            <p class="mb-3"><a href="">購物須知</a></p>
+                            <p class="mb-0"><a  href="">常見問題</a></p>
+                        </li>
+                        <li>
+                            <h5 class="text-primary mb-5">關於我們</h5>
+                            <p class="mb-3"><a href="">品牌故事</a></p>
+                            <p class="mb-3"><a href="">隱私政策</a></p>
+                            <p class="mb-0"><a href="">使用條款</a></p>
+                        </li>
+                        <li>
+                            <h5 class="text-primary mb-5">聯絡我們</h5>
+                            <p class="mb-3">CARRY國際股份公司</p>
+                            <p class="mb-3">carry@gmail.com</p>
+                            <p class="mb-3">06-123-4567</p>
+                            <p class="mb-0" >Mon-Fri 11:00-18:00</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 d-flex justify-content-end ">
+                    <h4 class="footer-logo "><a href="index.html">carry</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 社群開始 -->
+    <section class="footer-social ">
+        <div class="container py-7">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-4 social-icon">
+                    <ul class="d-flex">
+                        <li class="me-6"><a href=""><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                        <li class="me-6"><a href=""><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                    <p class="text-end">Copyright © 2020 CARRY All right reserved.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn  btn-top  text-primary rounded-0 rounded-circle d-flex justify-content-center align-items-center"><span class="material-icons">
+                arrow_upward
+            </span>
+        </a>
+    </section>
+    <!-- 社群結束 -->
+</footer>
+<!-- 表尾結束 -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d10d055091.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

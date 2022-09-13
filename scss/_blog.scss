@@ -1,0 +1,80 @@
+// banner開始
+.blog-banner{
+    background: url(../img/blog-banner.png)no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    @include iphone{
+        height: 80vh;
+        margin-bottom: 160px !important;
+    }
+     h2{
+        font-size: $font-48;  
+        @include iphone{
+            font-size: $font-40;
+        }      
+    }
+}
+.blog{
+    @include pad{
+        padding-bottom: 120px !important;
+    }
+    
+    .blog-card:hover .img-multiply{
+        opacity: .5;
+    }
+    .card-body{
+        @include iphone{
+            padding: 16px 0px 0px 0px !important;
+        }
+    }
+    .img{
+        position: relative;
+        cursor: pointer;
+    }
+    .img-1{
+        background: url('../img/blog-1.jpg')no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    .img-2{
+        background: url('../img/blog-2.jpg')no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    .img-3{
+        background: url('../img/blog-3.jpg')no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    .img-4{
+        background: url('../img/blog-4.jpg')no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    .img-5{
+        background: url('../img/blog-5.jpg')no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    .blog-card{
+        small{
+            font-size: $font-12;
+        }
+        h5{
+            font-size:$font-16;
+        }
+        p{
+            font-size: $font-14;
+        }
+
+    }
+    .btn-more{
+        width: 240px;
+    }
+}

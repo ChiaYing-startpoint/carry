@@ -1,0 +1,328 @@
+// 產品明細開始
+.product-dital{
+    margin-top: 92px;
+    @include iphone{
+        margin-top: 80px;
+    }
+    .swiper2-container {
+        width: 100%;
+        height: 100%; 
+        .swiper-button-prev:after,.swiper-button-next:after {
+            content: ''!important;
+        } 
+    }
+    .bg{
+        position: relative;
+    }
+    .img{
+        opacity: .87;
+    }
+    .img:hover{
+        opacity: 1;
+    }
+    .dital-txt{
+        @include pad{
+            padding: 100px !important;
+        }
+        @include iphone{
+            padding: 56px 16px !important;
+        }
+        h3{
+            font-family:'Noto Sans TC', sans-serif ;
+            font-size: $font-32;
+            letter-spacing: .05rem;
+            font-weight: 700;
+            color: rgba(255,255,255,.6);
+            @include iphone{
+                font-size:$font-24;
+                margin-bottom: 32px !important;
+            }
+        }
+        h4{
+            font-size: $font-20;
+        }
+        .btn-box{
+            @include iphone{
+                flex-direction: column !important;
+            }
+        }
+        .btn-addcart,.btn-buy{
+            @include iphone{
+                width: 100% !important;
+            }
+        }
+        .btn-addcart{
+            @include iphone{
+                margin-right: 0 !important;
+                margin-bottom: 24px !important;
+            }
+        }
+    }
+}
+// 產品明細結束
+// 產品特點開始
+.product-feature{
+    @include pad{
+        padding: 100px !important;
+    }
+     @include iphone{
+        padding: 56px 0px !important;
+    }
+    .col-pad-space{
+        margin-bottom: 80px !important;
+        @include iphone{
+            margin-bottom: 56px !important;
+        }
+    }
+    background: rgba(255,255,255,.08);
+    h4{
+        font-size: $font-32;
+        letter-spacing: .01rem;
+        font-weight: 500;
+        @include pad{
+            margin-bottom: 40px !important;
+        }
+         @include iphone{
+            font-size:$font-24;
+            margin-bottom: 32px !important;
+        }
+    }
+    .feature-list li{
+        font-size: $font-18;
+        position:relative;
+        margin-left: 16px !important;
+        color: rgba(255,255,255,.6);
+    }
+    .feature-list li::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius:100%;
+        background: rgba(255,255,255,.87);
+        left:-3%;
+        top:50%;
+    }
+    .accordion{
+        color:$white !important;
+        li,table,thead,tr,th,td{
+            font-size: $font-14;
+            color: rgba(255,255,255,.4);
+            font-weight: 100;
+        }
+    }
+}
+// 產品特點結束
+// 產品說明開始
+.product-description{
+     @include pad{
+        padding: 100px 0px !important;
+    }
+    @include iphone{
+        overflow:hidden;
+    }
+    .row-pad-space{
+        @include pad{
+            margin-bottom: 80px !important;
+        }
+    }
+    P{
+      color: rgba(255,255,255,.6);   
+    }
+    .img-first{ //圖片
+        background: url('../img/dital5.jpg')no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 420px;
+        position: relative;
+        @include pad{
+            background: url('../img/dital-5-pad.jpg')no-repeat; 
+            background-position: center center;
+            background-size: cover;
+            height: 250px;
+        }
+    }
+    .img-second{
+        background: url('../img/dital6.jpg')no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 420px;
+        position: relative;
+        @include pad{
+            background: url('../img/dital-6-pad.jpg')no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 250px;
+        }
+    }
+    .img-third{
+        background: url('../img/dital7.jpg')no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 420px;
+        position: relative;
+        @include pad{
+           background: url('../img/dital-7-pad.jpg')no-repeat;
+           background-position: center center;
+            background-size: cover;
+           height: 250px;
+        }
+    }
+    .img::after{ //方形
+        content: '';
+        position: absolute;
+        width: 20vw;  
+        height:40vh; 
+        background:rgba(199, 167, 128, .05);
+        top: -20%;
+        left:-28%;
+        z-index: -2;
+        @include pad{
+           height:15vh;
+           top: -10%; 
+        }
+        @include iphone{
+            width: 50vw;  
+            height:25vh;
+        }
+    }
+    .img-second::after{
+        content: '';
+        position: absolute;
+        width: 20vw;  
+        height:40vh; 
+        background:rgba(199, 167, 128, .05);
+        top: -20%;
+        right:-28%;
+        z-index: -1;
+        @include pad{
+           height:15vh;
+           top: -10%; 
+        }
+        @include iphone{
+            width: 50vw;  
+            height:25vh;
+        }
+    }
+    .txt{
+        @include pad{
+            margin-right: 32px !important;
+        }
+        @include iphone{
+            margin-top: 40px !important;
+        }
+    }
+    .txt-second{
+        margin-right: 0 !important;
+        margin-left:32px !important ;
+        @include iphone{
+            margin-left: 0px !important;
+        }
+    }
+    h4{
+        font-size: $font-32;
+        letter-spacing: .01rem;
+        font-weight: 500;
+        position:relative;
+        @include pad{
+            font-size: $font-20;
+            margin-bottom: 32px !important;
+        }
+    }
+    h4::after{
+        content: '';
+        position: absolute;
+        width: 88%;
+        height: 8px;
+        background-color:$primary;
+        bottom:-20%;
+        left:0;
+        @include pad{
+            bottom:-30%;
+        }
+    }
+    .number{
+        position: relative;
+        margin-left: 80px !important;
+        color: rgba(255,255,255,.4);
+        @include pad{
+            margin-bottom: 32px !important;
+        }
+    }
+    .number::before{
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 1px;
+        background-color: rgba(255,255,255,.4);
+        top: 50%;
+        left: -80px;
+    }
+}
+// 產品說明結束
+// 可能喜歡開始
+.product-like{
+     @include pad{
+        padding: 100px 0px !important;
+    }
+    @include iphone{
+        padding: 56px 0px !important;
+    }
+   background: rgba(255,255,255,.08);
+   img{
+        opacity: .87;
+    }
+    a:hover img{
+        opacity: 1;
+        transform:scale(1.03);
+        transition: .3s;
+    }
+    .img{
+        overflow: hidden !important;
+        @include pad{
+            margin-bottom: 16px !important;
+        }
+    }
+   .like-title{
+       font-size: $font-32;
+       letter-spacing: .01rem;
+       font-weight: 500;
+       @include pad{
+           margin-bottom: 40px !important;
+       }
+        @include iphone{
+            font-size:$font-24;
+            margin-bottom: 32px !important;
+        }
+   }
+   .text{
+       h4{
+           font-size: $font-16;
+       }
+       p{
+            font-size: $font-14;
+            opacity: .6;
+        }
+        span{
+            @include pad{
+                display: block !important;
+                margin-top: 4px !important;
+            }
+        }
+   }
+   .swiper3-container {
+        width: 100%;
+        height: 100%; 
+        .swiper-button-prev:after,.swiper-button-next:after {
+            content: ''!important;
+        } 
+        .btn:hover{
+            color: $primary;
+         }  
+         .swiper-button-next,.swiper-button-prev{
+             top:45% !important;
+         }   
+     }    
+}
+// 可能以歡結束
+
